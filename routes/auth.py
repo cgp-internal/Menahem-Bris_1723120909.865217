@@ -3,7 +3,8 @@ from flask_login import login_user, logout_user, login_required
 from werkzeug.security import generate_password_hash, check_password_hash
 from app import login_manager
 from models.user import User
-from forms import LoginForm, RegisterForm
+from forms.expense_form import ExpenseForm as LoginForm
+from forms.income_form import IncomeForm as RegisterForm
 from db import db
 
 auth_blueprint = Blueprint('auth', __name__)
