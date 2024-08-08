@@ -1,0 +1,20 @@
+Flask==2.0.1
+SQLAlchemy==1.4.25
+Werkzeug==2.0.1
+WTForms==2.3.3
+Flask-WTF==0.15.1
+Flask-SQLAlchemy==2.5.1
+Flask-Login==0.5.0
+Jinja2==3.0.1
+expensive==0.1.2; python_version ~= "3.7"
+User==0.1.2; python_version ~= "3.7"
+Income==0.1.2; python_version ~= "3.7"
+Expense==0.1.2; python_version ~= "3.7"
+ExpenseForm==0.1.2; python_version ~= "3.7"
+IncomeForm==0.1.2; python_version ~= "3.7"
+dashboard==0.1.2; python_version ~= "3.7"
+expenses==0.1.2; python_version ~= "3.7"
+income==0.1.2; python_version ~= "3.7"
+login==0.1.2; python_version ~= "3.7"
+register==0.1.2; python_version ~= "3.7"
+logout==0.1.2; python_version ~= "3.7"
