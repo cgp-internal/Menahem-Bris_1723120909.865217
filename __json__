@@ -1,0 +1,199 @@
+{
+    "app.py": {
+        "description": "Main entry point for the expense management application. Sets up the Flask server, defines routes, and starts the server.",
+        "dependencies": {
+            "templates/base.html": [],
+            "templates/dashboard.html": [],
+            "templates/expenses.html": [],
+            "templates/income.html": [],
+            "models/user.py": [
+                "User"
+            ],
+            "models/expense.py": [
+                "Expense"
+            ],
+            "models/income.py": [
+                "Income"
+            ],
+            "forms/expense_form.py": [
+                "ExpenseForm"
+            ],
+            "forms/income_form.py": [
+                "IncomeForm"
+            ],
+            "routes/dashboard.py": [
+                "dashboard"
+            ],
+            "routes/expenses.py": [
+                "expenses"
+            ],
+            "routes/income.py": [
+                "income"
+            ],
+            "routes/auth.py": [
+                "login",
+                "register",
+                "logout"
+            ]
+        },
+        "exposes": [
+            "app"
+        ]
+    },
+    "models/__init__.py": {
+        "description": "Initialize the models package."
+    },
+    "models/user.py": {
+        "description": "Define the User model.",
+        "dependencies": {},
+        "exposes": [
+            "User"
+        ]
+    },
+    "models/expense.py": {
+        "description": "Define the Expense model.",
+        "dependencies": {},
+        "exposes": [
+            "Expense"
+        ]
+    },
+    "models/income.py": {
+        "description": "Define the Income model.",
+        "dependencies": {},
+        "exposes": [
+            "Income"
+        ]
+    },
+    "forms/__init__.py": {
+        "description": "Initialize the forms package."
+    },
+    "forms/expense_form.py": {
+        "description": "Define the ExpenseForm.",
+        "dependencies": {
+            "models/expense.py": [
+                "Expense"
+            ]
+        },
+        "exposes": [
+            "ExpenseForm"
+        ]
+    },
+    "forms/income_form.py": {
+        "description": "Define the IncomeForm.",
+        "dependencies": {
+            "models/income.py": [
+                "Income"
+            ]
+        },
+        "exposes": [
+            "IncomeForm"
+        ]
+    },
+    "routes/__init__.py": {
+        "description": "Initialize the routes package."
+    },
+    "routes/dashboard.py": {
+        "description": "Define the dashboard route.",
+        "dependencies": {
+            "models/expense.py": [
+                "Expense"
+            ],
+            "models/income.py": [
+                "Income"
+            ]
+        },
+        "exposes": [
+            "dashboard"
+        ]
+    },
+    "routes/expenses.py": {
+        "description": "Define the expenses route.",
+        "dependencies": {
+            "models/expense.py": [
+                "Expense"
+            ]
+        },
+        "exposes": [
+            "expenses"
+        ]
+    },
+    "routes/income.py": {
+        "description": "Define the income route.",
+        "dependencies": {
+            "models/income.py": [
+                "Income"
+            ]
+        },
+        "exposes": [
+            "income"
+        ]
+    },
+    "routes/auth.py": {
+        "description": "Define the authentication routes.",
+        "dependencies": {
+            "models/user.py": [
+                "User"
+            ]
+        },
+        "exposes": [
+            "login",
+            "register",
+            "logout"
+        ]
+    },
+    "templates/__init__.py": {
+        "description": "Initialize the templates package."
+    },
+    "templates/base.html": {
+        "description": "Define the base template.",
+        "dependencies": {},
+        "exposes": [
+            "base"
+        ]
+    },
+    "templates/dashboard.html": {
+        "description": "Define the dashboard template.",
+        "dependencies": {
+            "routes/dashboard.py": [
+                "dashboard"
+            ]
+        },
+        "exposes": [
+            "dashboard_template"
+        ]
+    },
+    "templates/expenses.html": {
+        "description": "Define the expenses template.",
+        "dependencies": {
+            "routes/expenses.py": [
+                "expenses"
+            ]
+        },
+        "exposes": [
+            "expenses_template"
+        ]
+    },
+    "templates/income.html": {
+        "description": "Define the income template.",
+        "dependencies": {
+            "routes/income.py": [
+                "income"
+            ]
+        },
+        "exposes": [
+            "income_template"
+        ]
+    },
+    "db.sqlite": {
+        "description": "SQLite database for storing user information, expenses, and income."
+    },
+    "requirements.txt": {
+        "description": "List of dependencies required for the application."
+    },
+    "README.md": {
+        "description": "README with basic documentation and 'how to run' guide."
+    },
+    ".gitignore": {
+        "description": ".gitignore with node-modules and cache files."
+    }
+}
