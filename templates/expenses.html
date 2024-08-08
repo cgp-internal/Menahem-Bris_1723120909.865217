@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Expenses</h1>
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>Amount</th>
+    </tr>
+    {% if expenses %}
+      {% for expense in expenses %}
+        <tr>
+          <td>{{ expense.title }}</td>
+          <td>{{ expense.amount }}</td>
+        </tr>
+      {% endfor %}
+    {% else %}
+      <tr>
+        <td colspan="2">No expenses found</td>
+      </tr>
+    {% endif %}
+  </table>
+  <form action="" method="post">
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title"><br><br>
+    <label for="amount">Amount:</label>
+    <input type="number" id="amount" name="amount"><br><br>
+    <input type="submit" value="Add Expense">
+  </form>
+
+  {{ expenses_template }}
+{% endblock %}
