@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ dashboard_template.title }}</title>
+</head>
+<body>
+    <h1>{{ dashboard_template.header }}</h1>
+    <h2>Expenses</h2>
+    <ul>
+        {% for expense in dashboard.expenses %}
+            <li>{{ expense }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Incomes</h2>
+    <ul>
+        {% for income in dashboard.incomes %}
+            <li>{{ income }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
